@@ -16,12 +16,21 @@ import megan from "../../assets/megan.png";
 import cameron from "../../assets/cameron.png";
 
 type SidebarProps = {
+    overlay: boolean;
     sidebar: boolean;
 };
 
-const Sidebar = ({ sidebar }: SidebarProps) => {
+const Sidebar = ({ overlay, sidebar }: SidebarProps) => {
+    const containerClasses = overlay
+        ? sidebar
+            ? "sidebar-overlay"
+            : "sidebar-hidden"
+        : sidebar
+        ? "sidebar"
+        : "sidebar small-sidebar";
+
     return (
-        <div className={`sidebar ${sidebar ? "" : "small-sidebar"}`}>
+        <div className={containerClasses}>
             <div className="shortcut-links">
                 <div className="side-link">
                     <img src={home} alt="" />

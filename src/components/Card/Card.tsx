@@ -9,7 +9,7 @@ type CardProps = {
     title: string;
     channel: string;
     viewCount: string;
-    uploadTime: string;
+    postedTime: string;
 };
 
 const Card = ({
@@ -19,7 +19,7 @@ const Card = ({
     title,
     channel,
     viewCount,
-    uploadTime,
+    postedTime,
 }: CardProps) => {
     return (
         <Link to={`/video/${categoryId}/${videoId}`} className="card">
@@ -27,7 +27,7 @@ const Card = ({
             <h2>{title}</h2>
             <h3>{channel}</h3>
             <p>
-                {viewCount} views &bull; {uploadTime}
+                {viewCount} views &bull; {postedTime}
             </p>
         </Link>
     );

@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import "./navbar.css";
 import menu_icon from "../../assets/menu.png";
 import logo_icon from "../../assets/logo.png";
@@ -13,6 +15,8 @@ type NavbarProps = {
 };
 
 const Navbar = ({ setSidebar }: NavbarProps) => {
+    const navigate = useNavigate();
+
     return (
         <nav className="flex-div">
             <div className="nav-left flex-div">
@@ -22,7 +26,12 @@ const Navbar = ({ setSidebar }: NavbarProps) => {
                     src={menu_icon}
                     alt=""
                 />
-                <img className="logo" src={logo_icon} alt="" />
+                <img
+                    className="logo"
+                    onClick={() => navigate("/")}
+                    src={logo_icon}
+                    alt=""
+                />
             </div>
 
             <div className="nav-middle flex-div">
