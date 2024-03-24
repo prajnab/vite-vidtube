@@ -3,8 +3,8 @@ import React from "react";
 import "./publisher.css";
 
 type PublisherProps = {
-    imageUrl: string;
-    channel: string;
+    imageUrl?: string;
+    channel?: string;
     subscribeCount: string;
 };
 

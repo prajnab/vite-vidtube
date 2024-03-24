@@ -9,8 +9,8 @@ type CommentProps = {
     fullName: string;
     comment: string;
     postedTime: string;
-    likeCount: number;
-    dislikeCount: number;
+    likeCount: string;
+    dislikeCount?: number;
 };
 
 const Comment = (props: CommentProps) => {

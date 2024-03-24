@@ -1,10 +1,13 @@
 import React from "react";
-import "./card.css";
 import { Link } from "react-router-dom";
+import moment from "moment";
+
+import "./card.css";
+import { valueConverter } from "../../services/data.service";
 
 type CardProps = {
-    categoryId: number;
-    videoId: number;
+    categoryId: string;
+    videoId: string;
     imageUrl: string;
     title: string;
     channel: string;
@@ -27,7 +30,8 @@ const Card = ({
             <h2>{title}</h2>
             <h3>{channel}</h3>
             <p>
-                {viewCount} views &bull; {postedTime}
+                {valueConverter(+viewCount)} views &bull;{" "}
+                {moment(postedTime).fromNow()}
             </p>
         </Link>
     );

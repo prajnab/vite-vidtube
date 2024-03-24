@@ -22,6 +22,6 @@ img {
 .main-container {
     display: flex;
     flex: 1;
-    height: calc(100vh - 55px);
-    width: 100vw;
+    min-height: calc(100vh - 55px);
+    min-width: calc(100vh - 20px);
 }
