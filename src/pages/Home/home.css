@@ -11,3 +11,9 @@
 .large-container {
     padding-left: 85px;
 }
+
+@media (max-width: 900px) {
+    .home-container, .large-container {
+        padding-left: 20px;
+    }
+}
